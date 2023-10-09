@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Details</title> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js "></script>
+   <link rel="stylesheet" href="{% static 'header.css' %}"> 
+   <link rel="stylesheet" href="{% static 'home.css' %}"> 
+   <link rel="stylesheet" href="{% static 'footer.css' %}">  
+</head>
+
+<body>
+    <div class="header">
+        <div class="left-section">
+            <!--logo-->
+            <img src="{% static 'logo.jpg' %}" alt="My image">
+            <a href="/cdetail"><button style="font-weight: 700;">Home</button></a>
+            <!-- link to about us -->
+            <a href="#"><button style="font-weight: 700;">About Us</button></a>
+
+        </div>
+        
+        <div class="right-section">            
+            <a href="/cinput"><button>Add Course</button></a>
+            <a href="/cdetail"><button>My Courses</button></a>
+            <a href="/cartadd"><img src="{% static 'cart.png' %}" alt="My image" height="28px"></a>
+            <button type="submit"><a href="/signout">Signout</a></button>
+        </div>
+    </div>
+
+    <div class="head">
+        <img  src="{% static 'S.jpg' %}" alt="" >
+    </div>
+
+    <div class="car-container p-4">   
+        
+        {% if ec_list %}   
+            <div class="card-container d-flex flex-row p-4" style="margin-top: 80px;">
+                {% for mv in ec_list %}        
+                    <div class="d-flex flex-column p-4" id="cson">
+                        <img src="/media/{{mv.image}}" width="150" height="150">        
+                        <h1 class="text-center p-2">{{mv.Name}}</h1>
+                        <p class="text-center p-2">{{mv.Cost}}</p>
+                        <a class="text-center p-2" href="/cartadd" style="text-decoration: none; color: rgb(255, 250, 250); background: black;">Add to cart</a>
+                    </div>
+                {% endfor %}    
+            </div>
+        {% else %}
+        <p>no courses</p>
+        {% endif %}
+    </div>
+    <footer class="bg-light text-center text-lg-start">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2020 Copyright:
+          <a class="text-dark" href="#">Ecourse.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    
+</body>
+</html>

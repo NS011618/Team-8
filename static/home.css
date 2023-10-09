@@ -1,0 +1,33 @@
+.head{
+    display: flex;
+}
+.head img{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+    width: 75%;
+    height: 1;
+}
+.card-container img:hover{
+    filter: none;
+    -webkit-filter: brightness(70%);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.card-container{
+    padding: 15%;
+}
+.card-container h1{
+    
+    font-size :25px;
+}
+
+.car-container{
+    margin-bottom: 20%;
+}
+.svs button{
+    text-decoration: none;
+}
