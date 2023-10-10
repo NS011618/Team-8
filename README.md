@@ -44,5 +44,4 @@ Install dependencies
   To run website 
       python manage.py runserver
 ```
-# Team-8
-ecourse-website
+
