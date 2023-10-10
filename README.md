@@ -29,7 +29,7 @@ Deployed App link:
 Go to the project directory
 
 ```bash
-  cd ASHISHFINALPROJECT
+  cd Ecourse
 ```
 
 Install dependencies
